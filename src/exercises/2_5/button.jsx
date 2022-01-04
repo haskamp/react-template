@@ -2,7 +2,7 @@ import React from "react";
 import "styles";
 
 const Button = () => {
-	// Create an React Component
+	// Create a React Component
 	const [clicked, setClicked] = React.useState(false); // Get React State properties in Form of
 
 	return (

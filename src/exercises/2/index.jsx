@@ -14,37 +14,22 @@ import Card from "./card.jsx";
  * - ! Make sure that there are no errors about the `key` property in the web-console
  */
 
-const instructors = Array.from( {length: 5}, () => {
+const instructors = Array.from({ length: 5 }, () => {
 	return {
 		icon: "3 Icons",
 		name: "Lennard",
 		prize: "50€",
 		bookmark: "icon",
-
-
-	}
-
-
-})
+	};
+});
 
 const Exercise = () => {
 	return (
 		<div>
-			{instructors.map( (instructor) => {
-				return <Card
-					HeaderIcon={instructor.icon}
-					HeaderName={}
-					HeaderPrize={}
-					HeaderBookmark={}
-
-					CardImageProfile={}
-					CardTitle={}
-					CardSubtitle={}
-					CardDescription={}
-					CardSkills={}
-				/>;
-			})}			}
-
+			{instructors.map((instructor) => {
+				return <Card HeaderIcon={instructor.icon} />;
+			})}
+			}
 		</div>
 	);
 };
