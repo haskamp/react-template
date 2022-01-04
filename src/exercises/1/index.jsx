@@ -1,4 +1,5 @@
 import React from "react";
+import "./styles.css";
 
 /**
  * ## Card
@@ -9,7 +10,34 @@ import React from "react";
  *      And The button text changes
  */
 const Exercise = () => {
-	return <h1>Exercise 1</h1>;
+	const [hidden, setHidden] = React.useState(false); // [Boolean, function]
+	return (
+		<div className={"Card"}>
+			<figure className={"CardImageHolder"}>
+				<img
+					className={"CardImage"}
+					src="https://images.unsplash.com/photo-1564499504739-bc4fc2ae8cba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1633&q=80"
+					alt="People kiting"
+				/>
+			</figure>
+			<div className={"card-headline"}>
+				<h3>Surfing</h3>
+			</div>
+			{hidden ? (
+				<div>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consequatur
+						cumque dolore doloribus explicabo molestiae nisi quidem vel? A aperiam
+						cumque ducimus fugiat fugit laboriosam mollitia necessitatibus odio pariatur
+						vero.
+					</p>
+				</div>
+			) : null}
+			<div className={"card-actions"}>
+				<button onClick={() => setHidden(!hidden)}>{hidden ? "Hide" : "Show"}</button>
+			</div>
+		</div>
+	);
 };
 
 export default Exercise;

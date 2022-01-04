@@ -1,0 +1,16 @@
+.Card {
+	background: red;
+	width: 300px;
+	border-radius: 10px;
+}
+
+
+.CardImageHolder {
+	margin: 0;
+	display: flex;
+	justify-content: center;
+}
+
+.CardImage {
+	width: 300px;
+}

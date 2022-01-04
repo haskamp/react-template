@@ -1,4 +1,6 @@
 import React from "react";
+import styles from "./styles.module.css";
+import Card from "./card.jsx";
 
 /**
  * ## Cards
@@ -11,8 +13,40 @@ import React from "react";
  * 2. Create a Responsive Grid with 5 cards
  * - ! Make sure that there are no errors about the `key` property in the web-console
  */
+
+const instructors = Array.from( {length: 5}, () => {
+	return {
+		icon: "3 Icons",
+		name: "Lennard",
+		prize: "50€",
+		bookmark: "icon",
+
+
+	}
+
+
+})
+
 const Exercise = () => {
-	return <h1>Exercise 2</h1>;
+	return (
+		<div>
+			{instructors.map( (instructor) => {
+				return <Card
+					HeaderIcon={instructor.icon}
+					HeaderName={}
+					HeaderPrize={}
+					HeaderBookmark={}
+
+					CardImageProfile={}
+					CardTitle={}
+					CardSubtitle={}
+					CardDescription={}
+					CardSkills={}
+				/>;
+			})}			}
+
+		</div>
+	);
 };
 
 export default Exercise;

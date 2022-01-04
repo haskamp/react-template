@@ -1,0 +1,73 @@
+.Cards {
+	display: grid;
+	grid-template-columns: repeat(var(--columns, 1), 1fr);
+}
+
+@media (min-width: 487px) {
+	.Cards{
+		--columns: 2;
+	}
+}
+
+@media (min-width: 887px) {
+	.Cards{
+		--columns: 4;
+	}
+}
+.Card {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 0px;
+
+	width: 360px;
+
+	background: #FFFBF7;
+
+	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 2px 6px 2px rgba(0, 0, 0, 0.15);
+	border-radius: 12px;
+}
+
+.CardHeader {
+	margin: 0;
+	display: flex;
+	justify-content: center;
+}
+
+.CardImage {
+width: 300px;
+}
+.CardHeadline {
+	margin-left: 1rem;
+}
+
+.CardDescription {
+	margin-left: 1rem;
+}
+
+.CardActions {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.ActionButton {
+	background-color: lightseagreen;
+	border: none;
+	border-radius: 0 0 1rem 0;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+}
+
+.ActionButton:hover {
+	background-color: dodgerblue;
+}
+
+.ActionButton:active {
+	border: inset;
+}
+
+
