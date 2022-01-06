@@ -1,0 +1,21 @@
+const ComponentE = ({ color, background, style = {}, ...rest }) => {
+	const ref = useRef(null);
+	return (
+		<div>
+			<div ref={ref} {...rest} style={{ ...style, color, "background-color": background }}>
+				I should be '{color}' with a '{"background-color"}' background, a fonz-size of '
+				{style.fontSize}' and a text-decoration '{style["text-decoration"]}'!{" "}
+				{/*String notation is an anti-pattern!*/}
+				{/*I should be {props.color} with a {props.background} background*/}
+			</div>
+			<HTMLOutput outerRef={ref} />
+		</div>
+	);
+};
+
+<ComponentE
+				style={{ fontSize: "20px", "text-decoration": "underline" }}
+				color="red"
+				background-color="yellow" // Anti-Pattern
+				className={"card__headline"}
+/>

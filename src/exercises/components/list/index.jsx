@@ -1,17 +1,11 @@
 import React from "react";
 import styles from "./styles.module.css";
 
-const List = ({ children, listTitle, ArrayListItems className, ...props }) => {
+const List = ({ children, listTitle, ...props }) => {
 	return (
 		<div>
 			<h3>{listTitle}</h3>
-			<ul className={[styles.List, className].join(" ")}>
-				for I in [] ...
-				arraylistItems.map((li) => (
-					<li>li</li>
-					<ListItem li={arrayLi}/>
-				))
-				{children}</ul>
+			<ul>{children}</ul>
 		</div>
 	);
 };

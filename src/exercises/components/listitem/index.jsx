@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./styles.module.css";
 
-const ListItem = ({ [children1, children2], className, ...props }) => {
+const ListItem = ({ className, ...props }) => {
 	return (
 		<li className={[styles.List, className].join(" ")}>
 			{children}

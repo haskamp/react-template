@@ -48,15 +48,15 @@ const ComponentA = (props) => {
 /**
  * This Component uses object destructuring. It only outputs the "rest"
  */
-const ComponentB = ({ foo, bar, ...rest }) => {
-	return <Code code={rest} />;
+const ComponentB = ({ foo, age, ...elResto }) => {
+	return <Code code={[age, elResto]} />;
 };
 
 /**
  * This Component passes all props to the dom-element
  */
 const ComponentC = (props) => {
-	const ref = useRef(null);
+	const ref = useRef(null); // Hook
 
 	return (
 		<div>
@@ -69,7 +69,7 @@ const ComponentC = (props) => {
 /**
  * This Component picks "color" and adds it to the style attribute
  */
-const ComponentD = ({ color, style = {}, ...rest }) => {
+const ComponentD = ({ color, style = { background: "yellow" }, ...rest }) => {
 	const ref = useRef(null);
 	return (
 		<div>
@@ -83,12 +83,12 @@ const ComponentD = ({ color, style = {}, ...rest }) => {
  * This Component picks "color" and "background" and adds it tho the style attribute
  * The output only shows the "style" attribute
  */
-const ComponentE = (props) => {
+const ComponentE = ({ color, background, style = {}, ...rest }) => {
 	const ref = useRef(null);
 	return (
 		<div>
-			<div ref={ref} {...props}>
-				I should be {props.color} with a {props.background} background
+			<div ref={ref} style={{ ...style, color, background }}>
+				I am {color} with a {background} background
 			</div>
 			<HTMLOutput outerRef={ref} />
 		</div>
@@ -120,7 +120,15 @@ const Exercise = () => {
 			<h2>ComponentA</h2>
 			<p>All properties are passed on</p>
 			<ComponentA foo="foo" bar={`BA${"r".toUpperCase()}`} />
-			<ComponentA age={26} name={{ first: "Max", last: "Harrington" }} />
+
+			<ComponentA
+				color="red"
+				hallo="hi"
+				foo="foo"
+				bar="bar"
+				age={26}
+				name={{ first: "Max", last: "Harrington" }}
+			/>
 			<h2>ComponentB</h2>
 			<p>
 				Some properties were removed by{" "}
@@ -140,13 +148,15 @@ const Exercise = () => {
 				.
 			</p>
 			<ComponentB foo="foo" bar={`BA${"r".toUpperCase()}`} />
+
 			<ComponentB age={26} name={{ first: "Max", last: "Harrington" }} />
+
 			<h2>ComponentC</h2>
 			<p>All properties are passed on</p>
-			<ComponentC color="red" foo="foo" bar="bar" />
+			<ComponentC color="red" hallo="hi" foo="foo" bar="bar" />
 			<h2>ComponentD</h2>
 			<p>Color is removed and added to style</p>
-			<ComponentD color="red" foo="foo" bar="bar" />
+			<ComponentD styles={"color:red;"} color="red" foo="foo" bar="bar" />
 			<h2>ComponentE</h2>
 			<ComponentE color="red" background="yellow" />
 			<h2>ComponentF</h2>

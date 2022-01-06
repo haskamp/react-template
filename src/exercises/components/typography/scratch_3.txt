@@ -1,0 +1,14 @@
+	switch (variant) {
+		default:
+			return (
+				<div>
+					<p className={styles.p}>{children}</p>
+				</div>
+			);
+		case "span":
+			return (
+				<div>
+					<span className={styles.span}>{children}</span>
+				</div>
+			);
+	}

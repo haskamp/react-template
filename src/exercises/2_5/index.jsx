@@ -20,15 +20,8 @@ const Exercise = () => {
 			<Button className={styles.irgendwas}>Click me</Button>
 
 			<Typography>Hallo</Typography>
-			<Typography className={"blas"} variant={"span"}>
-				{"Hallo"}
-			</Typography>
 
 			<Checkbox label={"verstanden?"}></Checkbox>
-
-			<List listTitle={"TitelTolle Liste"}>
-				{<ListItem/><ListItem/><ListItem/><ListItem/><ListItem/><ListItem/>>}
-			</List>
 		</div>
 	);
 };
