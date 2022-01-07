@@ -1,11 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
-.p {
-	font-family: "Roboto Light";
+.Default {
+	font-family: "Roboto ";
+}
+
+.h1 {
+	font-family: "Roboto ";
+	font-weight: 300;
+	font-size: 94px;
+	letter-spacing: -1.5px;
+}
+.h2 {
+	font-family: "Roboto";
+	font-weight: 300;
+	font-size: 60px;
+	letter-spacing: 0.5px;
+}
+.h3 {
+	font-family: "Roboto";
+	font-weight: 400;
+	font-size: 48px;
+	letter-spacing: 0px;
+}
+.h4 {
+	font-family: "Roboto";
+	font-weight: 400;
+	font-size: 34px;
+	letter-spacing: 0.25px;
+}
+.h5 {
+	font-family: "Roboto";
+	font-weight: 400;
+	font-size: 24px;
+	letter-spacing: 0px;
+}
+.h6 {
+	font-family: "Roboto";
+	font-weight: 400;
+	font-size: 20px;
+	letter-spacing: 0.15px;
+}
+
+.body1 {
+	font-family: "Roboto Light", sans-serif;
 	font-weight: normal;
 	font-size: 16px;
 	letter-spacing: 0.5px;
 }
-.span {
+.body2 {
 	font-family: "Roboto Thin";
 	font-weight: normal;
 	font-size: 14px;

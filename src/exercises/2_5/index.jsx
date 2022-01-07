@@ -16,16 +16,11 @@ import styles from "./styles.css";
  */
 const Exercise = () => {
 	return (
-		<div>
-			<Button className={styles.irgendwas}>Click me</Button>
-
-			<Typography>Hallo</Typography>
-
-			<Checkbox label={"verstanden?"}></Checkbox>
+		<div className={"flex"}>
+			<h1>Buttons</h1>
+			<Button></Button>
 		</div>
 	);
 };
 
 export default Exercise;
-
-// {React.createElement(Button, { className: "Hallo", "aria-label": "blau" }, "rot")}

@@ -1,3 +1,14 @@
-.irgendwas {
-	color: firebrick;
+
+
+_grid {
+	display: grid;
+	grid-template-columns: 20% repeat(var(--columns), 1fr) 20%;
+}
+
+
+.flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
