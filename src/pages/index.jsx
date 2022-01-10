@@ -6,6 +6,9 @@ const Home = () => {
 		<div>
 			<h1>Hello Home</h1>
 			<nav>
+				<div>
+					<Link to={`/portfolio/`}>Portfolio</Link>
+				</div>
 				{Array.from({ length: 6 }, (_, index) => index + 1).map((page) => {
 					if (page === 2) {
 						return (

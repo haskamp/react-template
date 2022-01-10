@@ -3,6 +3,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages";
 import Exercises from "./pages/exercises";
 import Solutions from "./pages/solutions";
+import Portfolio from "./pages/portfolio";
+import Projects from "./pages/portfolio";
 import "./styles.css";
 
 const App = () => {
@@ -13,6 +15,9 @@ const App = () => {
 					<Route index element={<Home />} />
 					<Route path="exercises/:page" element={<Exercises />} />
 					<Route path="solutions/:page" element={<Solutions />} />
+
+					<Route path="portfolio" element={<Portfolio />} />
+					<Route path="projects" element={<Projects />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>
